@@ -9,12 +9,18 @@
   },
   "author": "SugiShio",
   "license": "ISC",
+  "dependencies": {
+    "@vue/compat": "^3.5.13",
+    "vue": "^3.5.13"
+  },
   "devDependencies": {
+    "@vue/compiler-sfc": "^3.5.13",
     "@webpack-cli/generators": "^3.0.7",
     "css-loader": "^7.1.2",
     "sass": "^1.81.0",
     "sass-loader": "^16.0.3",
     "style-loader": "^4.0.0",
+    "vue-loader": "^17.4.2",
     "webpack-cli": "^5.1.4"
   }
 }
