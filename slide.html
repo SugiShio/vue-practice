@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <section id="slide">
+    <h2>スライド</h2>
+    <transition-group :name="slide" tag="div">
+      <section v-show="isInput" key="input" class="slide">
+        <h3>入力</h3>
+      </section>
+      <section v-show="isConfirm" key="confirm" class="slide">
+        <h3>確認</h3>
+      </section>
+      <section v-show="isComplete" key="complete" class="slide">
+        <h3>完了</h3>
+      </section>
+    </transition-group>
+
+    <div class="navigator">
+      <button @click="decrementPage">←</button>
+      {{ stepNo + 1 }}
+      <button @click="incrementPage">→</button>
+    </div>
+
+  </section>
+</body>
+
+<script src="./dist/main.js" defer></script>
+
+</html>

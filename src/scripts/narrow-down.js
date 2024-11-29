@@ -1,6 +1,7 @@
 import { createApp } from "vue";
 document.addEventListener("DOMContentLoaded", () => {
   const elementNarrowDown = document.getElementById("narrow-down");
+  if (!elementNarrowDown) return;
 
   const baseUrl = elementNarrowDown.dataset.baseUrl || "";
   createApp({
