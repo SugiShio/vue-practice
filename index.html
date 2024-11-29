@@ -53,6 +53,14 @@
       </li>
     </ul>
   </section>
+
+  <section id="validation">
+    <h2>リアルタイムバリデーション</h2>
+    <label for="email"></label>
+    <input type="text" v-model="email" id="email">
+    <p>{{ errorText }}</p>
+    <button :disabled="!!errorText || !email">送信</button>
+  </section>
 </body>
 
 <script src="./dist/main.js" defer></script>
