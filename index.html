@@ -27,6 +27,32 @@
     <a :href="url" target='_blank'>絞り込む</a>
     <button @click="sendRequest">絞り込む</a>
   </section>
+
+  <section id="acoordion">
+    <h2>アコーディオン</h2>
+    <ul class="acoordion">
+      <li>
+        <button @click="isOpen[0] = !isOpen[0]" class="acoordion__head">
+          東急東横線
+        </button>
+        <ul v-show="isOpen[0]">
+          <li>渋谷</li>
+          <li>代官山</li>
+          <li>中目黒</li>
+        </ul>
+      </li>
+      <li>
+        <button @click="isOpen[1] = !isOpen[1]" class="acoordion__head">
+          東急目黒線
+        </button>
+        <ul v-show="isOpen[1]">
+          <li>目黒</li>
+          <li>不動前</li>
+          <li>武蔵小山</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
 </body>
 
 <script src="./dist/main.js" defer></script>
