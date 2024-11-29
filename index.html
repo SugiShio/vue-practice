@@ -8,7 +8,25 @@
 </head>
 
 <body>
-  <p>hello,world!</p>
+  <section id="narrow-down" data-base-url="https://s005.francfranc.com">
+    <h2>絞り込みUI</h2>
+    <input type="checkbox" v-model="conditions" id="1r" value="1r">
+    <label for="1r">1R</label>
+
+    <input type="checkbox" v-model="conditions" id="1k" value="1k">
+    <label for="1k">1K</label>
+
+    <input type="checkbox" v-model="conditions" id="1ld" value="1ld">
+    <label for="1ld">1LD</label>
+
+    <input type="checkbox" v-model="conditions" id="1ldk" value="1ldk">
+    <label for="1ldk">1LDK</label>
+
+    <div>url: {{ url }}</div>
+
+    <a :href="url" target='_blank'>絞り込む</a>
+    <button @click="sendRequest">絞り込む</a>
+  </section>
 </body>
 
 <script src="./dist/main.js" defer></script>
